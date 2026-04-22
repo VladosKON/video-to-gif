@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер Видео в GIF</title>
+    
+    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Конвертер в GIF</h1>
+    <div class="split-layout">
+        <div class="left-panel">
+            <div class="form-group">
+                <label for="video-upload">Выберите видео (MP4, WebM)</label>
+                <input type="file" id="video-upload" accept="video/mp4,video/webm,video/x-m4v,video/*">
+            </div>
+
+            <div class="form-group">
+                <label class="info-fps" for="fps-slider">Количество кадров (FPS): <span id="fps-value" class="range-value">15</span></label>
+                <input type="range" id="fps-slider" min="15" max="60" value="30" step="1">
+                
+                <div class="fps-presets">
+                    <button type="button" class="preset-btn" data-fps="30">30</button>
+                    <button type="button" class="preset-btn" data-fps="45">45</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Размер GIF (Ширина × Высота в пикселях)</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="number" class="input-size" id="width-input" placeholder="Ширина" value="480" min="10">
+                    <input type="number" class="input-size" id="height-input" placeholder="Высота (Авто)" min="10">
+                </div>
+
+                <div class="size-presets">
+                    <button type="button" class="size-btn" data-width="480">480p</button>
+                    <button type="button" class="size-btn" data-width="1024">1024p</button>
+                </div>  
+
+                <small style="color: #666; font-size: 12px; margin-top: 5px; display: block;">
+                    *Оставьте высоту пустой, чтобы сохранить оригинальные пропорции видео.
+                </small>
+            </div>
+        </div>
+    
+        <div class="right-panel">
+            
+            <div class="preview-area">
+                <div id="status">Ядро FFmpeg загружается. Подождите...</div>
+                
+                <div class="progress-bar-container" id="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+
+                <div id="result">
+                    <img id="output-gif" src="" alt="Готовая GIF">
+                    <a id="download-btn" href="#" download="converted.gif">Скачать GIF</a>
+                </div>
+            </div>
+
+            <button id="convert-btn">Создать GIF</button>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="lightbox" class="lightbox">
+    <span id="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Полноэкранная GIF">
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
