@@ -11,10 +11,10 @@ body {
         box-sizing: border-box;
     }
 .card {
-    background: white;
+    background: #503AE5;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 0px;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
     max-width: 850px;
     width: 100%;
 }
@@ -42,9 +42,8 @@ body {
     justify-content: center;
     
     /* Делаем красивую "пустую" зону ожидания */
-    background-color: #f8f9fa;
-    border: 2px dashed #dee2e6;
-    border-radius: 8px;
+    background-color: #fff;
+    border: 2px dashed #000;
     padding: 20px;
     margin-bottom: 20px; /* Отступ от кнопки */
     min-height: 250px; /* Минимальная высота, чтобы не схлопывалось */
@@ -59,7 +58,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #fff;
     margin-top: 0;
     font-size: 24px;
 }
@@ -71,7 +70,7 @@ label {
     font-weight: 600;
     margin-bottom: 8px;
     padding-top: 12px;
-    color: #444;
+    color: #fff;
     font-size: 18px;
 }
 input[type="file"], select {
@@ -93,20 +92,20 @@ input[type="range"] {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
-    color: white;
+    background-color: #99F7D3;
+    color: #333;
     border: none;
-    border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 6px 6px 0 0 #000;
     transition: background 0.3s;
 }
 button:hover {
-    background-color: #0056b3;
+    background-color: #21F2A1;
 }
 button:disabled {
-    background-color: #a0c4ff;
+    background-color: #99F7D3;
     cursor: not-allowed;
 }
 #status {
@@ -164,22 +163,22 @@ button:disabled {
     padding: 6px;
     font-size: 13px;
     background: #fff;
-    border: 1px solid #007bff;
-    color: #007bff;
-    border-radius: 4px;
+    border: 1px solid #000;
+    color: #333;
     cursor: pointer;
     transition: all 0.2s ease;
+    box-shadow: 4px 4px 0 #000;
     font-weight: 500;
 }
 
 .preset-btn:hover {
-    background: #f0f7ff;
+    background: #E2FFF4;
 }
 
 /* Стиль для активной кнопки */
 .preset-btn.active {
-    background: #007bff;
-    color: #fff;
+    background-color: #99F7D3;
+    color: #333;
 }
 
 .size-presets {
@@ -194,23 +193,23 @@ button:disabled {
     padding: 6px;
     font-size: 13px;
     background: #fff;
-    border: 1px solid #007bff;
-    color: #007bff;
-    border-radius: 4px;
+    border: 1px solid #000;
+    color: #333;
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 500;
+    box-shadow: 4px 4px 0 #000;
     min-width: 70px;
 }
 
 .size-btn:hover {
-    background: #f0f7ff;
+    background: #E2FFF4;
 }
 
 /* Активное состояние кнопки */
 .size-btn.active {
-   background: #007bff;
-    color: #fff;
+   background-color: #99F7D3;
+    color: #333;
 }
 
 /* Делаем маленькую GIF кликабельной */

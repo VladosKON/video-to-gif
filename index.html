@@ -16,11 +16,11 @@
         <div class="left-panel">
             <div class="form-group">
                 <label for="video-upload">Выберите видео (MP4, WebM)</label>
-                <input type="file" id="video-upload" accept="video/mp4,video/webm,video/x-m4v,video/*">
+                <input style="color: #fff;" type="file" id="video-upload" accept="video/mp4,video/webm,video/x-m4v,video/*">
             </div>
 
             <div class="form-group">
-                <label class="info-fps" for="fps-slider">Количество кадров (FPS): <span id="fps-value" class="range-value">15</span></label>
+                <label class="info-fps" for="fps-slider">Количество кадров (FPS): <span style="color: #fff" id="fps-value" class="range-value">15</span></label>
                 <input type="range" id="fps-slider" min="15" max="60" value="30" step="1">
                 
                 <div class="fps-presets">
@@ -30,7 +30,7 @@
             </div>
 
             <div class="form-group">
-                <label>Размер GIF (Ширина × Высота в пикселях)</label>
+                <label>Размер GIF</label>
                 <div style="display: flex; gap: 10px;">
                     <input type="number" class="input-size" id="width-input" placeholder="Ширина" value="480" min="10">
                     <input type="number" class="input-size" id="height-input" placeholder="Высота (Авто)" min="10">
@@ -41,7 +41,7 @@
                     <button type="button" class="size-btn" data-width="1024">1024p</button>
                 </div>  
 
-                <small style="color: #666; font-size: 12px; margin-top: 5px; display: block;">
+                <small style="color: #fff; font-size: 12px; margin-top: 5px; display: block;">
                     *Оставьте высоту пустой, чтобы сохранить оригинальные пропорции видео.
                 </small>
             </div>
@@ -58,11 +58,11 @@
 
                 <div id="result">
                     <img id="output-gif" src="" alt="Готовая GIF">
-                    <a id="download-btn" href="#" download="converted.gif">Скачать GIF</a>
+                    <a id="download-btn" href="#" download="converted.gif">Скачать</a>
                 </div>
             </div>
 
-            <button id="convert-btn">Создать GIF</button>
+            <button id="convert-btn">Создать</button>
         </div>
     </div>
 

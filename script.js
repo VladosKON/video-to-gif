@@ -98,10 +98,10 @@ fpsSlider.addEventListener('input', (e) => {
     convertBtn.disabled = true;
     try {
         await ffmpeg.load();
-        statusText.textContent = "Готово! Загрузите видео.";
+        statusText.textContent = "Загрузите видео.";
         convertBtn.disabled = false;
     } catch (error) {
-        statusText.textContent = "Ошибка загрузки FFmpeg.";
+        statusText.textContent = "Ошибка загрузки. Обновите страницу";
         console.error(error);
     }
 })();
